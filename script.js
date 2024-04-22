@@ -4,8 +4,13 @@ const passConfirm = document.querySelector('#confirm-password');
 const errorMsg = document.querySelector('#psw-error');
 const form = document.querySelector('form');
 
+let pswMatch = null;
+
 function submitClicked() {
     matchPasswords();
+    if (pswMatch && form.checkValidity) {
+        form.submit();
+    }
 }
 
 
@@ -14,11 +19,10 @@ function matchPasswords() {
         errorMsg.textContent="Passwords must match!";
         passConfirm.style.border=("1px solid red");
         passField.style.border=("1px solid red");
+        pswMatch==false
     }
     else {
-        form.submit();
-        console.log("submitted");
-        form.reset();
+        pswMatch=true;
     }
 }
 
