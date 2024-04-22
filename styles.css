@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'yataghan';
+    src: url('./fonts/yataghan.ttf');
+}
+
 body {
     height: 100vh;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -7,7 +12,6 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;
-    ;
 }
 
 #main-container {
@@ -27,12 +31,13 @@ body {
 }
 
 #logo-container {
+    font-family: 'yataghan';
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: 28px;
     opacity: 0.4;
     color: white;
     background-color: black;
@@ -46,7 +51,7 @@ p {
 #logo {
     /* position: absolute;
     right: 0; */
-    height: 150px;
+    height: 100px;
 }
 
 #main-img {
@@ -71,10 +76,83 @@ p {
     font-size: 24px;
     gap: 20px;
     padding: 10px;
-    margin-top: 100px;
-    margin-right: 100px;
+    margin-top: 70px;
+    margin-right: 80px;
+    margin-bottom: 50px;
 }
 
 form {
+    padding: 50px;
     background-color: white;
+    box-shadow: 2px 2px 7px 1px #333233;
+}
+
+#form-text {
+    width: 100%;
+    font-size: 24px;
+}
+
+#form-inputs {
+    display: flex;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px;
+}
+
+label, input {
+    display: inline-block;
+}
+
+input {
+    height: 20px;
+}
+
+input:focus {
+    box-shadow: 2px 2px 7px 1px #333233;
+    border:#333233;
+    outline: none !important;
+}
+
+label {
+    margin-top: 20px;
+}
+
+#psw-error {
+    color: red;
+    font: 4px;
+    height: 10px;
+}
+
+#bottom-text {
+    display: flex;
+    padding: 16px;
+}
+
+button {
+    padding: 16px;
+    margin-left: 20px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover:active{
+    background-color: #333233;
+}
+
+#login-text {
+    font-size: 16px;
+    font-weight: bold;
+    color:  white;
+    padding: 16px;
+}
+
+a {
+    color: black;
 }
